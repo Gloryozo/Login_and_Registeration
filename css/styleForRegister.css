@@ -1,0 +1,58 @@
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: Arial, sans-serif; /* Fallback font */
+}
+h1 {
+    text-align: center;
+    color: #007bff; /* Blue color for headings */
+    margin-top: 20px; /* Add margin from the top */
+}
+.container {
+    max-width: 500px; /* Limit container width */
+    margin: auto; /* Center the container horizontally */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for the container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    margin-top: 10px; /* Add margin from the top */
+}
+form {
+    margin-top: 20px; /* Add margin from the top */
+}
+label {
+    font-weight: bold; /* Make labels bold */
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 10px; /* Spacing between input fields */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+button[type="submit"] {
+    width: 100%; /* Full width for the submit button */
+    padding: 10px; /* Padding for the submit button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Blue color for button */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+p {
+    margin-top: 20px; /* Add margin from the top */
+    text-align: center; /* Center-align text */
+}
+a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
