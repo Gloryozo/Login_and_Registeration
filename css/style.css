@@ -1,0 +1,31 @@
+h1{
+    margin: 1em 0;
+    color: royalblue;
+}
+
+h2{
+    margin: 1em 0;
+    color: darkblue;
+}
+div{
+    margin: 1em 0;
+    color: darkblue;
+
+
+}
+
+h3{
+    margin: 1em 0;
+    color: darkblue;
+}
+
+form{
+   align-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 1px solid #6b1010;
+    border-radius: 5px;
+    color: #724c9a;
+}
