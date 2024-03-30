@@ -32,19 +32,36 @@ app.get("/", (req, res) => {
 
     })
 })
-
 // Post request handler
 
 app.post("/add", (req, res) => {
-    const pool = openDb();
-    const { first_name,last_name, email, phone,password } = req.body;
+    // Destructure required fields from the request body
+    const { first_name, last_name, email, phone, password } = req.body;
 
-    pool.query('INSERT INTO users (first_name,last_name, email, phone, password) VALUES ($1, $2, $3, $4, $5)', [first_name,last_name, email, phone, password], (error) => {
+    // Check if any required field is missing
+    if (!first_name || !last_name || !email || !phone || !password) {
+        return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    // Insert user into the database
+    const pool = openDb();
+    const query = 'INSERT INTO users (first_name, last_name, email, phone, password) VALUES ($1, $2, $3, $4, $5)';
+    const values = [first_name, last_name, email, phone, password];
+
+    pool.query(query, values, (error,result) => {
         if (error) {
-            res.status(500).json({ error: error.message }); 
+            // Handle database error
+            console.error("Database error:", error);
+            return res.status(500).json({ error: "Failed to add user" });
         }
-        res.status(200).send('User added successfully');
-    })
+        // Check the affected row count to ensure the user was inserted successfully
+    if (result.rowCount === 1) {
+        res.status(200).json({ message: "User added successfully" });
+    }else {
+        console.error("Failed to add user:, No rows affected");
+        res.status(500).json({ error: "Failed to add user" });
+    };
+});
 })
 
 app.listen(port);
