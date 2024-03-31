@@ -1,11 +1,16 @@
 body {
     background-color: #f8f9fa; /* Light gray background */
     font-family: Arial, sans-serif; /* Fallback font */
+    background-image: url('../images/pexels-photo.webp'); /* Background image */
+    background-attachment: fixed; /* Cover the entire viewport */
+    background-position: left center; /* Center the background image */
+
 }
 h1 {
     text-align: center;
     color: #007bff; /* Blue color for headings */
     margin-top: 20px; /* Add margin from the top */
+    
 }
 .container {
     max-width: 500px; /* Limit container width */
