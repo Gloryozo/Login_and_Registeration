@@ -5,14 +5,15 @@ button.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     
     // Get the values of input fields
-    const firstName = document.getElementById('Firstname').value.trim();
-    const lastName = document.getElementById('Lastname').value.trim();
-    const email = document.getElementById('Email').value.trim();
-    const password = document.getElementById('Password').value.trim();
-    const confirmPassword = document.getElementById('ConfirmPassword').value.trim();
+    const firstName = document.getElementById('firstname').value.trim();
+    const lastName = document.getElementById('lastname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
 
     // Check if any of the fields are empty
-    if (firstName === '' || lastName === '' || email === '' || password === '' || confirmPassword === '') {
+    if (firstName === '' || lastName === '' || email === '' || phone === '' || password === '' || confirmPassword === '') {
         alert('Please fill in all fields');
         return;
     }
@@ -27,14 +28,16 @@ button.addEventListener('click', (event) => {
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
     console.log('Email:', email);
+    console.log('Phone:', phone);
     console.log('Password:', password);
 
     // Clear the input fields after submission (optional)
-    document.getElementById('Firstname').value = '';
-    document.getElementById('Lastname').value = '';
-    document.getElementById('Email').value = '';
-    document.getElementById('Password').value = '';
-    document.getElementById('ConfirmPassword').value = '';
+    document.getElementById('firstname').value = '';
+    document.getElementById('lastname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('confirmPassword').value = '';
 
     // Perform further actions like sending data to the server, etc.
 });

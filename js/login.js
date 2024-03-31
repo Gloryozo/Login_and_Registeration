@@ -7,8 +7,8 @@ input.addEventListener('keypress', (event) => {
      if (event.key === 'Enter') {
          event.preventDefault(); // Prevent default form submission behavior
             
-        const usernameOrEmail = input.value.trim();
-        const password = input.value.trim();
+        const usernameOrEmail = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
     
             // Check if the input values are not empty
         if (usernameOrEmail === '' || password === '') {
@@ -21,7 +21,8 @@ input.addEventListener('keypress', (event) => {
             console.log('Password:', password);
     
             // Clear the input fields after submission (optional)
-            input.value = '';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
         }
     });
 
@@ -31,8 +32,8 @@ button.addEventListener('click', (event) => {
     // Prevent the default form submission
     event.preventDefault();
 
-    const usernameOrEmail = input.value.trim(); // Get the value of the input field
-    const password = input.value.trim(); // Get the value of the input field
+    const usernameOrEmail = document.getElementById('username').value.trim(); // Get the value of the input field
+    const password = document.getElementById('password').value.trim(); // Get the value of the input field
 
     // Check if the input values are not empty
     if (usernameOrEmail === '' || password === '') {
@@ -44,5 +45,6 @@ button.addEventListener('click', (event) => {
      console.log('Password:', password);
  
      // Clear the input fields after submission (optional)
-     input.value = '';
+     document.getElementById('username').value = '';
+     document.getElementById('password').value = '';
  });
