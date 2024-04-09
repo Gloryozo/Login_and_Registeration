@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.profile {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.profile-details {
+    text-align: center;
+}
+
+.profile-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.quiz-history-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.quiz-history-list li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.profile-actions {
+    text-align: center;
+}
+
+.profile-actions button {
+    padding: 12px 24px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-actions button:hover {
+    background-color: #0056b3;
+}
+/* Add space around the image */
+#image-preview {
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 20px; /* Adjust the bottom margin as needed */
+}
+
+/* Add space between the image and other elements */
+.col-md-2 {
+    margin-right: 20px; /* Adjust the right margin as needed */
+}
+/* Adjust the size of the image */
+#image-preview {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height of the image */
+}
